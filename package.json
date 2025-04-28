@@ -4,7 +4,7 @@
   "description": "Gilded Rose kata in JavaScript with Jest",
   "type": "ES2020",
   "scripts": {
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test": "node --experimental-vm-modules --no-deprecation node_modules/jest/bin/jest.js",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "texttest": "node test/texttest_fixture.js"
