@@ -5,7 +5,7 @@ export default abstract class Item {
   abstract updateQuality(): void;
   abstract updateSellIn(): void;
 
-  protected constructor(name: string, sellIn: number, quality: number){
+  constructor(name: string, sellIn: number, quality: number){
     this.name = name;
     this.sellIn = sellIn;
     this.quality = quality;
