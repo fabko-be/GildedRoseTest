@@ -6,8 +6,8 @@ describe("Legendary Item", () => {
 
   it("Legendary must not be degraded and can always be sold ", () => {
     const legendaryItem = new LegendaryItem("Sulfuras", 5, quality);
-    legendaryItem.updateQuality();
     legendaryItem.updateSellIn();
+    legendaryItem.updateQuality();
     expect(legendaryItem.quality).toBe(quality);
     expect(legendaryItem.sellIn).toBe(LEGENDARY_SELLIN);
   });
