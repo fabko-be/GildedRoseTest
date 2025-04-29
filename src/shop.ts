@@ -5,9 +5,16 @@ export const MIN_QUALITY = 0;
 export const LEGENDARY_SELLIN = Infinity
 
 export default class Shop {
-  private readonly items: Item[];
+  readonly items: Item[];
   constructor(items: Item[] = []){
     this.items = items;
+  }
+
+  updateShop = () => {
+    this.items.forEach(item => {
+      item.updateSellIn();
+      item.updateQuality();
+    })
   }
 
   // No more used, was part of the correction for ../test/gilded_rose.bak.ts test
