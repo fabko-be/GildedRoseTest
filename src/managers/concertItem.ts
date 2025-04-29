@@ -1,4 +1,5 @@
 import Item from "../item"
+import {MAX_QUALITY} from "../shop";
 
 export default class ConcertItem extends Item {
 
@@ -16,7 +17,11 @@ export default class ConcertItem extends Item {
         break;
     }
 
-    this.quality += bonus;
+    if (this.quality + bonus > MAX_QUALITY) {
+      this.quality = MAX_QUALITY;
+    } else {
+      this.quality += bonus;
+    }
   }
 
   updateSellIn() {
