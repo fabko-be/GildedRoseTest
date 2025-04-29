@@ -11,4 +11,12 @@ describe("Legendary Item", () => {
     expect(legendaryItem.quality).toBe(quality);
     expect(legendaryItem.sellIn).toBe(LEGENDARY_SELLIN);
   });
+
+  it("Legendary must not be updated if sellIn is infinity", () => {
+    const legendaryItem = new LegendaryItem("Sulfuras", LEGENDARY_SELLIN, quality);
+    legendaryItem.updateSellIn();
+    legendaryItem.updateQuality();
+    expect(legendaryItem.quality).toBe(quality);
+    expect(legendaryItem.sellIn).toBe(LEGENDARY_SELLIN);
+  })
 });

@@ -15,4 +15,11 @@ describe("Regular Item", () => {
     regularItem.updateQuality();
     expect(regularItem.quality).toBe(3);
   });
+
+  it("Items quality can't be under 0", () => {
+    const regularItem = new NormalItem("Sword", 5, 0);
+    regularItem.updateSellIn();
+    regularItem.updateQuality();
+    expect(regularItem.quality).toBe(0);
+  });
 });
