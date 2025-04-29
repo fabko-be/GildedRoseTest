@@ -5,8 +5,8 @@
   "type": "ES2020",
   "scripts": {
     "test": "node --experimental-vm-modules --no-deprecation node_modules/jest/bin/jest.js",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage",
+    "test:watch": "node --experimental-vm-modules --no-deprecation node_modules/jest/bin/jest.js --watch",
+    "test:coverage": "node --experimental-vm-modules --no-deprecation node_modules/jest/bin/jest.js --coverage",
     "texttest": "node test/texttest_fixture.js"
   },
   "repository": {
