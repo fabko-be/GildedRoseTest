@@ -15,7 +15,7 @@ I just had to find a trick to make Jest work with the Shop class
 
 * use `npm install`
 
-### Executing program
+### Executing program tests
 
 * Test code with `npm run test`
 * You can see the test coverage with `npm run test:coverage`
